@@ -1,4 +1,4 @@
-import framebuf
+import adafruit_framebuf as framebuf
 from ..ssd1306 import BASE_SSD1306_I2C
 
 
