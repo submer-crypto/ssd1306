@@ -13,7 +13,8 @@ class SSD1306_I2C(BASE_SSD1306_I2C):
             addr=0x3C,
             external_vcc=False,
             buf_format=framebuf.MVLSB):
-        super(width, height, buf_format, i2c, res, addr, external_vcc)
+        super().__init__(
+            width, height, buf_format, i2c, res, addr, external_vcc)
 
     def write_cmd(self, cmd):
         self.i2c.write_byte_data(self.addr, 0x80, cmd)  # Co=1, D/C#=0
