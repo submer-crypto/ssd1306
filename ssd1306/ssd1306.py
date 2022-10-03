@@ -29,6 +29,7 @@ SET_PRECHARGE = const(0xD9)
 SET_VCOM_DESEL = const(0xDB)
 SET_CHARGE_PUMP = const(0x8D)
 
+
 # Subclassing FrameBuffer provides support for graphics primitives
 # http://docs.micropython.org/en/latest/pyboard/library/framebuf.html
 class BASE_SSD1306(framebuf.FrameBuffer):
@@ -115,7 +116,15 @@ class BASE_SSD1306(framebuf.FrameBuffer):
 
 
 class BASE_SSD1306_I2C(BASE_SSD1306):
-    def __init__(self, width, height, buf_format, i2c, res=None, addr=0x3C, external_vcc=False):
+    def __init__(
+            self,
+            width,
+            height,
+            buf_format,
+            i2c,
+            res=None,
+            addr=0x3C,
+            external_vcc=False):
         self.i2c = i2c
         self.res = res
         self.addr = addr

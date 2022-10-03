@@ -19,7 +19,7 @@ requirements-freeze:
 	$(PYTHON) -m pip freeze > requirements.txt
 
 lint:
-	$(PYTHON) -m flake8 wire test
+	$(PYTHON) -m flake8 ssd1306
 
 test:
 	$(PYTHON) -m pytest -s test
