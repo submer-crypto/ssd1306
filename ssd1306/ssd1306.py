@@ -73,8 +73,6 @@ class BASE_SSD1306:
             SET_DISP | 0x01,  # display on
         ):  # on
             self.write_cmd(cmd)
-        self.fill(0)
-        self.show()
 
     def poweroff(self):
         self.write_cmd(SET_DISP)
